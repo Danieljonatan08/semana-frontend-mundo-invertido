@@ -40,13 +40,22 @@
 
       <section id="section-stranger-things-trailer" class="container">
         <!-- Trecho com trailer e um texto -->
-        <div class="container-video">
-          <video></video>
+        <div class="video-frame" aria-hidden="true">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/h-2LIjOt0rA?si=SwVnUp8ou4LgHalQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
 
-        <div class="container-text">
+        <div class="section-texts">
           <h2>stranger things vol. 4</h2>
-          <p>
+          <p role="text">
             Mais experientes, os heróis de Stranger Things também precisam
             enfrentar desafios maiores do que nunca e fazer decisões que vão
             mudar suas vidas para sempre. Confira ao lado o trailer da quarta
@@ -58,19 +67,26 @@
       <section id="section-stranger-things-gallery">
         <!-- Trecho com galeria de imagens -->
         <h2>a segunda série mais assistida da netflix</h2>
-        <div class="container-galeria">
-          <img
-            src="./assets/images/content/serie-image-01.png"
-            alt="imagem da serie-image-01"
-          /><img
-            src="./assets/images/content/serie-image-02.png"
-            alt="imagem da serie-image-02"
-          /><img
-            src="./assets/images/content/serie-image-03.png"
-            alt="imagem da serie-image-03"
-          />
-        </div>
-        
+        <ul class="gallery-container" role="gallery">
+          <li>
+            <img
+              src="./assets/images/content/serie-image-01.png"
+              alt="imagem da serie-image-01"
+            />
+          </li>
+          <li>
+            <img
+              src="./assets/images/content/serie-image-02.png"
+              alt="imagem da serie-image-02"
+            />
+          </li>
+          <li>
+            <img
+              src="./assets/images/content/serie-image-03.png"
+              alt="imagem da serie-image-03"
+            />
+          </li>
+        </ul>
       </section>
 
       <section id="section-form" class="container">
@@ -90,15 +106,18 @@
             entre para o clube de d&d e tenha experiências de outro mundo.
           </h2>
           <form>
-            <label for="">nome completo</label>
-            <input type="text" />
-            <label for="">e-mail</label>
-            <input type="email" name="" id="" />
-            <label for="">level</label>
-            <input type="text" />
-            <label for="">personagem</label>
-            <input type="text" />
-            <button>Me inscrever</button>
+            <label for="txtName">Nome Completo</label>
+            <input type="text" name="name" id="txtName" />
+
+            <label for="txtEmail">E-mail</label>
+            <input type="email" name="email" id="txtEmail" />
+
+            <label for="txtLevel">Level</label>
+            <input type="text" name="name" id="txtLevel"/>
+
+            <label for="txtCharacter" >personagem</label>
+            <textarea name="character" cols="30" rows="10" id="txtCharacter"></textarea>
+            <button type="button" id="btnSubscribe" >Me inscrever</button>
           </form>
         </div>
       </section>
@@ -110,7 +129,7 @@
         Projeto construído para fins didáticos, com o objetivo de colocar em
         prática os conhecimentos de HTML, CSS e JavaScript aprendidos na DIO.
       </p>
-      <img src="./assets/images/footer/logo.svg" alt="">
+      <img src="./assets/images/footer/logo.svg" alt="" />
     </footer>
   </body>
 </html>
